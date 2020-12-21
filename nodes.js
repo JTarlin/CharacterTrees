@@ -5,10 +5,10 @@ var DIR = "./assets/"
 
 // create an array with nodes
 var nodes = new vis.DataSet([
-    { id: 1, shape: "circularImage", image: DIR + "mattis.png", level: 1, group: "apex"},
-    { id: 2, shape: "circularImage", image: DIR + "vulpis.png", level: 2, group: "apex" },
-    { id: 3, label: "Orpheus Faust", level: 2, group: "harper" },
-    { id: 4, label: "Mary May", level: 3, group: "apex" },
+    { id: 1, shape: "circularImage", image: DIR + "mattis.png", label: "Glen Mattis", level: 1, group: "apex"},
+    { id: 2, shape: "circularImage", image: DIR + "vulpis.png", label: "Morgan Vulpis", level: 2, group: "apex" },
+    { id: 3, shape: "circularImage", image: DIR + "faust.png", label: "Orpheus Faust", level: 2, group: "harper" },
+    { id: 4, shape: "circularImage", image: DIR + "may.png", label: "Mary May", level: 3, group: "apex" },
     { id: 5, label: "Mr. Bruce", level: 3, group: "apex" },
     {id: 6, label: "Coralai Cronn", level: 3, group: "cronn"},
     {id: 7, label: "Mariel Navila", level: 4, group: "magv"},
