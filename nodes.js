@@ -1,10 +1,12 @@
 const blue = "#2a3fde";
 const red = "#bf0845";
 
+var DIR = "./assets/"
+
 // create an array with nodes
 var nodes = new vis.DataSet([
-    { id: 1, label: "Glen Mattis", level: 1, group: "apex"},
-    { id: 2, label: "Morgan Vulpis", level: 2, group: "apex" },
+    { id: 1, shape: "circularImage", image: DIR + "mattis.png", level: 1, group: "apex"},
+    { id: 2, shape: "circularImage", image: DIR + "vulpis.png", level: 2, group: "apex" },
     { id: 3, label: "Orpheus Faust", level: 2, group: "harper" },
     { id: 4, label: "Mary May", level: 3, group: "apex" },
     { id: 5, label: "Mr. Bruce", level: 3, group: "apex" },
