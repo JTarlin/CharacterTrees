@@ -5,7 +5,7 @@ var DIR = "./assets/"
 
 // create an array with nodes
 var nodes = new vis.DataSet([
-    { id: 1, shape: "circularImage", image: DIR + "mattis.png", label: "Glen Mattis", level: 1, group: "apex", x: 8000, y: 8000},
+    { id: 1, shape: "circularImage", image: DIR + "mattis.png", label: "Glen Mattis", level: 1, group: "apex"},
     { id: 2, shape: "circularImage", image: DIR + "vulpis.png", label: "Morgan Vulpis", level: 2, group: "apex" },
     { id: 3, shape: "circularImage", image: DIR + "faust.png", label: "Orpheus Faust", level: 2, group: "harper" },
     { id: 4, shape: "circularImage", image: DIR + "may.png", label: "Mary May", level: 3, group: "apex" },
@@ -14,7 +14,11 @@ var nodes = new vis.DataSet([
     {id: 7, shape: "circularImage", image: DIR + "navila.png",label: "Mariel Navila", level: 4, group: "magv"},
     {id: 8, shape: "circularImage", image: DIR + "hydar.png",label: "Koren Hydar", level: 2, group: "magv"},
     {id: 9, shape: "circularImage", image: DIR + "sona.png",label: "Skar Sona", level: 2, group: "magv"},
-    {id: 10, shape: "circularImage", image: DIR + "barati.png",label: "Sofia Barati", level: 1, group: "magv", x: 0, y: 0},
+    {id: 10, shape: "circularImage", image: DIR + "barati.png",label: "Sofia Barati", level: 1, group: "magv"},
+    {id: 11, shape: "circularImage", image: DIR + "lava.png",label: "LAVA", level: 1, group: 1},
+    {id: 12, shape: "circularImage", image: DIR + "masaka.png",label: "Masaka", level: 1, group: 2},
+    {id: 13, shape: "circularImage", image: DIR + "corvo.png",label: "Corvo Cronn", level: 1, group: "cronn"},
+    {id: 14, shape: "circularImage", image: DIR + "bebo.png",label: "Jiddy Bebo", level: 1, group: 3},
   ]);
 
   // create an array with edges
@@ -37,6 +41,10 @@ var nodes = new vis.DataSet([
     {from: 9, to: 4, color: {color: red, opacity: 1}},
     {from: 8, to: 4, color: {color: red, opacity: 1}},
     {from: 4, to: 6, color: {color: blue, opacity: 1}},
+    {from: 10, to: 11, color: {color: blue, opacity: 1}},
+    {from: 4, to: 12, color: {color: blue, opacity: 1}},
+    {from: 6, to: 13, color: {color: red, opacity: 1}},
+    {from: 3, to: 14, color: {color: red, opacity: 1}},
   ]);
 
   // create a network
@@ -49,20 +57,16 @@ var nodes = new vis.DataSet([
         layout: {
             hierarchical: false
         },
-        edges: {
-            smooth: {
-                type: "cubicBezier",
-                forceDirection: "none",
-                roundness: 0.4,
-            },
+        nodes: {
+            borderWidth: 10,
         },
         groups: {
             apex: {
-                color: { background: "#32D2CF", border: "white"},
+                color: { background: "#32D2CF", border: "#32D2CF"},
                 font: {color: "black"}
             },
             magv: {
-                color: { background: "#A22222", border: "black"},
+                color: { background: "#A22222", border: "#A22222"},
                 font: {color: "black"}
             },
             harper: {
@@ -70,7 +74,7 @@ var nodes = new vis.DataSet([
                 font: {color: "black"}
             },
             cronn:  {
-                color: { background: "#930EEC", border: "#D7B124"},
+                color: { background: "#D7B124", border: "#930EEC"},
                 font: {color: "black"}
             },
         },
